@@ -71,7 +71,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 					</span>
 				</span>
 			</p>
-			<h2 id="status"/>
+			<h2 id="status">Status will go here</h2>
 		</div>
 
 		<!-- OpenID Connect Button - Step 2: resolve dependencies to jQuery, bootstrap, jsjws and jsrasign -->
@@ -117,7 +117,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 				} else {
 					console.log("not signed in...");
 					console.log(result);
-					$("#status").html("Do I know you?!");
+					$("#status").html("You are not signed in yet.");
 				}
 			}
 		</script>
@@ -125,9 +125,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<!-- OpenID Connect Button - Step 2: add this script element right before closing </body> tag -->
 		<script type="text/javascript">
 		  (function() {
-		   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		   var po = document.createElement('script');
+		   po.type = 'text/javascript';
+		   po.async = true;
 		   po.src = './js/oidc-button.js';
-		   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		   var s = document.getElementsByTagName('script')[0];
+		   s.parentNode.insertBefore(po, s);
 		 })();
 		</script>
 	</body>
